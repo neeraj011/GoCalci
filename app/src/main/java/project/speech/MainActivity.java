@@ -225,7 +225,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         {
 
         }
-        Double first=0.0;
+        Double first;
         if(input.charAt(1)=='-')
         {
             first=val.get(1);
@@ -298,7 +298,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
             if (it)
                 j--;
         }
-        Double ans=0.0;
+        Double ans;
         try
         {
             if(val.isEmpty())
@@ -307,14 +307,14 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
             }
             else {
                 ans = val.pop(); //hello
-                String ans1="";
+                String ans1;
                 if(ans==Math.floor(ans))
                 {
                     ans1= String.valueOf(ans.intValue());
                 }
                 else
                 {
-                    ans1 = String.format("%.3f", ans);
+                    ans1 = String.format(Locale.getDefault(),"%.3f", ans);
                 }
                 resultText1.setText(ans1);
             }
