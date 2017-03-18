@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
                         String res=resultText1.getText().toString();
                         String text = "The answer is "+ res;
                         if(resultText1.getText().toString().length()>0)
-                        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+                            tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
                     }
                 },DELAY);
             }
@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
 
     public void onButtonClick(View v)
     {
-        if (v.getId() == R.id.imageButton)
+        if (v.getId() == R.id.imageButton) ;
         {
             promptspeechInput();
         }
@@ -183,7 +183,11 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         Stack<Double> valtmp = new Stack<>();
 
         input = "0" + input;
-        if((input.length()==3 && input.charAt(3)=='%') || input.charAt(input.length())=='%')
+        if (input.length()==3 & input.charAt(2)=='%')
+        {
+            input = input.replaceAll("%","/100");
+        }
+        else if (input.charAt(input.length()-1)=='%')
         {
             input = input.replaceAll("%","/100");
         }
@@ -286,7 +290,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
             if (it)
                 j--;
         }
-        Double ans;
+        Double ans=0.0;
         try
         {
             if(val.isEmpty())
@@ -295,14 +299,14 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
             }
             else {
                 ans = val.pop(); //hello
-                String ans1;
+                String ans1="";
                 if(ans==Math.floor(ans))
                 {
                     ans1= String.valueOf(ans.intValue());
                 }
                 else
                 {
-                    ans1 = String.format(Locale.getDefault(),"%.3f", ans);
+                    ans1 = String.format("%.3f", ans);
                 }
                 resultText1.setText(ans1);
             }
