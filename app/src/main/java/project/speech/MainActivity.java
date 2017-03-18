@@ -225,6 +225,14 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         {
 
         }
+        Double first=0.0;
+        if(input.charAt(1)=='-')
+        {
+            first=val.get(1);
+            first=first*-1;
+            val.set(1,first);
+            op.remove(0);
+        }
         char operators[] = {'^','/','x','+','-'};
         for (int j = 0; j < 5; j++)
         {
