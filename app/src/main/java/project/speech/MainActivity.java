@@ -1,3 +1,4 @@
+//Project MCC
 package project.speech;
 
 import android.content.ActivityNotFoundException;
@@ -118,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
 
     public void onButtonClick(View v)
     {
-        if (v.getId() == R.id.imageButton) ;
+        if (v.getId() == R.id.imageButton)
         {
             promptspeechInput();
         }
@@ -285,7 +286,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
             if (it)
                 j--;
         }
-        Double ans=0.0;
+        Double ans;
         try
         {
             if(val.isEmpty())
@@ -294,14 +295,14 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
             }
             else {
                 ans = val.pop(); //hello
-                String ans1="";
+                String ans1;
                 if(ans==Math.floor(ans))
                 {
                     ans1= String.valueOf(ans.intValue());
                 }
                 else
                 {
-                    ans1 = String.format("%.3f", ans);
+                    ans1 = String.format(Locale.getDefault(),"%.3f", ans);
                 }
                 resultText1.setText(ans1);
             }
