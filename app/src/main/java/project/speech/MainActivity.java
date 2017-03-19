@@ -188,8 +188,8 @@ import java.util.TimerTask;
                     input = input.replaceAll("log of","lg");
                     input = input.replaceAll("natural log","ln");
                     input = input.replaceAll("natural log of","ln");
-                    input = input.replaceAll("Open Parenthesis","(");
-                    input = input.replaceAll("close parenthesis",")");
+                    input = input.replaceAll("Open Parentheses","(");
+                    input = input.replaceAll("close parentheses",")");
                     resultText.setText(input);
                     evaluate(input);
                 }
