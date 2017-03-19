@@ -79,7 +79,7 @@
                 android:text="lg"
                 android:textAllCaps="false"
                 android:textStyle="bold"
-                android:onClick=""
+                android:onClick="onClickNumber"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp" />
 
@@ -94,12 +94,12 @@
                 android:minHeight="80dp"
                 android:text="ln"
                 android:textAllCaps="false"
-                android:onClick="onClick"
+                android:onClick="onClickNumber"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/btnsqrt"
                 android:layout_width="88dp"
                 android:layout_height="match_parent"
@@ -107,9 +107,9 @@
                 android:layout_marginRight="2dp"
                 android:background="#ccc"
                 android:minHeight="80dp"
-                android:src="@drawable/sqrt"
+                android:text="√ "
                 android:textAllCaps="false"
-                android:onClick="onClick"
+                android:onClick="onClickNumber"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -123,10 +123,11 @@
                 android:background="#ccc"
                 android:minHeight="80dp"
                 android:src="@drawable/microphone1"
-                android:onClick="onButton"
+                android:onClick="onButtonClick"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                />
 
         </LinearLayout>
 
@@ -146,7 +147,7 @@
                 android:minHeight="80dp"
                 android:text="sin"
                 android:textAllCaps="false"
-                android:onClick=""
+                android:onClick="onClickNumber"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp" />
@@ -215,7 +216,7 @@
                 android:background="#ccc"
                 android:minHeight="80dp"
                 android:text="!"
-                android:onClick="onButtonClick"
+                android:onClick="onClickNumber"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -238,7 +239,7 @@
                 android:minHeight="80dp"
                 android:text="cos"
                 android:textAllCaps="false"
-                android:onClick=""
+                android:onClick="onClickNumber"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp" />
@@ -329,7 +330,7 @@
                 android:minHeight="80dp"
                 android:text="tan"
                 android:textAllCaps="false"
-                android:onClick=""
+                android:onClick="onClickNumber"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp" />
@@ -435,7 +436,7 @@
                 android:minHeight="80dp"
                 android:src="@drawable/backspace"
                 android:textAllCaps="false"
-                android:onClick="onClickNumber"
+                android:onClick="onClickBack"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp" />
@@ -460,6 +461,7 @@
                 android:minHeight="80dp"
                 android:layout_marginLeft="2dp"
                 android:text="."
+                android:onClick="onClickNumber"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="35sp" />
