@@ -131,6 +131,8 @@ import java.util.TimerTask;
         i.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         i.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.ENGLISH);
         i.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.UK);
+        i.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.US);
+        i.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.UNICODE_LOCALE_EXTENSION);
         i.putExtra(RecognizerIntent.EXTRA_PROMPT,"Say Something");
         try
         {
@@ -329,6 +331,7 @@ import java.util.TimerTask;
             if(val.isEmpty())
             {
                 Toast.makeText(getBaseContext(),"Bad Expression",Toast.LENGTH_SHORT).show();
+                clear();
             }
             else {
                 ans = val.pop(); //hello
