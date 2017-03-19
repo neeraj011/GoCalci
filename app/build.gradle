@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "project.speech"
         minSdkVersion 10
-        targetSdkVersion 24
+        targetSdkVersion 12
         versionCode 1
         versionName "1.0"
     }
