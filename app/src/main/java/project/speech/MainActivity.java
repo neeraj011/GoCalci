@@ -22,7 +22,7 @@ import java.util.Stack;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MainActivity extends AppCompatActivity implements TextToSpeech.OnInitListener {
+ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnInitListener {
     private String display = "";
     private TextView resultText;
     private TextView resultText1;

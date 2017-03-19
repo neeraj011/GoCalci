@@ -6,7 +6,6 @@
     android:background="#f3323232"
     android:orientation="vertical"
     tools:context="project.speech.MainActivity">
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="92dp"
