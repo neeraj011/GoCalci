@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         buttonTan.setOnClickListener(this);
         buttonLn.setOnClickListener(this);
         buttonLog.setOnClickListener(this);
-        resultText1.addTextChangedListener(new TextWatcher()
+        resultText1.addTextChangedListener(new TextWatcher()//Text to Speech
         {
             boolean isTyping=false;
             @Override
