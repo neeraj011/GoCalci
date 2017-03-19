@@ -161,10 +161,10 @@ import java.util.TimerTask;
                     input = input.replaceAll("divide by","/");
                     input = input.replaceAll("bye","/");
                     input = input.replaceAll("by","/");
-                    input = input.replaceAll("into","x");
-                    input = input.replaceAll("in to","x");
-                    input = input.replaceAll("multiplied by","x");
-                    input = input.replaceAll("multipliedby","x");
+                    input = input.replaceAll("into","X");
+                    input = input.replaceAll("in to","X");
+                    input = input.replaceAll("multiplied by","X");
+                    input = input.replaceAll("multipliedby","X");
                     input = input.replaceAll("raisedto","^");
                     input = input.replaceAll("raised to","^");
                     input = input.replaceAll("to the power of","^");
@@ -193,13 +193,14 @@ import java.util.TimerTask;
         }
         else
         {
-            input = input.replaceAll("%","/100x");
+            input = input.replaceAll("%","/100*");
         }
+        input=input.replaceAll("X","*");
         String temp = "";
         for (int j = 0;j < input.length();j++)
         {
             char ch = input.charAt(j);
-            if (ch != '+' &&  ch!='-' && ch != 'x' && ch != '/' && ch!='^')
+            if (ch != '+' &&  ch!= '-' && ch != '*' && ch != '/' && ch!='^')
             {
                 temp = temp + ch;
             }
@@ -233,7 +234,7 @@ import java.util.TimerTask;
             val.set(1,first);
             op.remove(0);
         }
-        char operators[] = {'^','/','x','+','-'};
+        char operators[] = {'^','/','*','+','-'};
         for (int j = 0; j < 5; j++)
         {
             boolean it = false;
