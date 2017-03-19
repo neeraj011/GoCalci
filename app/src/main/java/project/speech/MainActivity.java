@@ -333,18 +333,28 @@ import java.util.TimerTask;
                 Toast.makeText(getBaseContext(),"Bad Expression",Toast.LENGTH_SHORT).show();
                 clear();
             }
-            else {
+            else
+            {
                 ans = val.pop(); //hello
-                String ans1;
-                if(ans==Math.floor(ans))
+                if(ans>2147483640)
                 {
-                    ans1= String.valueOf(ans.intValue());
+                    Toast.makeText(getBaseContext(),"Bad Expression",Toast.LENGTH_SHORT).show();
+                    clear();
                 }
                 else
                 {
-                    ans1 = String.format(Locale.getDefault(),"%.3f", ans);
+                    String ans1;
+                    if(ans==Math.floor(ans))
+                    {
+                        ans1= String.valueOf(ans.intValue());
+                    }
+                    else
+                    {
+                        ans1 = String.format(Locale.getDefault(),"%.3f", ans);
+                    }
+                    resultText1.setText(ans1);
                 }
-                resultText1.setText(ans1);
+
             }
         }
         catch(EmptyStackException e)
